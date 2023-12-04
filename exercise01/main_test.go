@@ -25,3 +25,28 @@ func TestCountDigits(t *testing.T) {
 		})
 	}
 }
+
+func TestCountDigitsWithTextNumbers(t *testing.T) {
+
+	cases := []struct {
+		input    string
+		expected int
+	}{
+		{"two1nine", 29},
+		{"eightwothree", 83},
+		{"abcone2threexyz", 13},
+		{"4nineeightseven2", 42},
+		{"zoneight234", 14},
+		{"7pqrstsixteen", 76},
+	}
+
+	for _, testCase := range cases {
+		t.Run(testCase.input, func(t *testing.T) {
+			result, error := ParseAndConvertToTextInt(testCase.input)
+			if error != nil || result != testCase.expected {
+				t.Errorf("Expected %d digits, but got %d ", testCase.expected, result)
+			}
+
+		})
+	}
+}
