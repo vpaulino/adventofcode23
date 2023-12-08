@@ -29,7 +29,6 @@ func parseIntsFromMap(textToParse string) string {
 
 	numbersMap := make(map[string]int)
 
-	numbersMap["zero"] = 0
 	numbersMap["one"] = 1
 	numbersMap["two"] = 2
 	numbersMap["three"] = 3
@@ -50,7 +49,7 @@ func parseIntsFromMap(textToParse string) string {
 	numbersMap["8"] = 8
 	numbersMap["9"] = 9
 
-	regularExpression := regexp.MustCompile(`(zero|one|two|three|four|five|six|seven|eight|nine|\d)`)
+	regularExpression := regexp.MustCompile(`(\d|one|two|three|four|five|six|seven|eight|nine)`)
 
 	matches := regularExpression.FindAllString(textToParse, -1)
 

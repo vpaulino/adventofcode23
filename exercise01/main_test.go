@@ -38,7 +38,15 @@ func TestCountDigitsWithTextNumbers(t *testing.T) {
 		{"4nineeightseven2", 42},
 		{"zoneight234", 14},
 		{"7pqrstsixteen", 76},
-		{"xrlsktwodnbcbonefvxxqgbrsdthree3seven", 27},
+		{"6ninesrdgkrfivefoursckkrfrpqqhgzeightwoj", 62},
+		{"eightwo", 82},
+		{"oneight", 18},
+		{"twone", 21},
+		{"threeight", 38},
+		{"fiveight", 58},
+		{"sevenine", 79},
+		{"nineight", 98},
+		{"eighthree", 83},
 	}
 
 	for _, testCase := range cases {
