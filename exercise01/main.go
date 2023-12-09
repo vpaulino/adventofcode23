@@ -25,6 +25,8 @@ func main() {
 			fmt.Println("error converting ints", err)
 		}
 
-		fmt.Printf(" { \"%s\", %d - %d } \n", line, intNums, total)
+		fmt.Printf(" { \"%s\", %d }, \n", line, intNums)
 	}
+
+	fmt.Printf(" Total is: %d \n", total)
 }
